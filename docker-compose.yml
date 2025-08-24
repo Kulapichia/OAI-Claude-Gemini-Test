@@ -1,0 +1,18 @@
+services:
+  web:
+    image: devinglaw/api-key-tester:latest
+    ports:
+      - "8839:8080"
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - build-files:/app/build  # 可选：持久化构建文件
+    deploy:
+      resources:
+        limits:
+          memory: 64M
+          cpus: '0.2'
+
+volumes:
+  build-files:

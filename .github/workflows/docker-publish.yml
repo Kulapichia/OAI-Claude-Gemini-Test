@@ -1,0 +1,108 @@
+name: Build and Publish Docker image to GHCR
+
+on:
+  push:
+    branches: [ experimental, main ]
+  workflow_dispatch:
+    inputs:
+      push_to_registry:
+        description: 'Push to registry (otherwise just build)'
+        required: false
+        default: true
+        type: boolean
+      platforms:
+        description: 'Target platforms (comma separated)'
+        required: false
+        default: 'linux/amd64,linux/arm64'
+        type: string
+      custom_tag:
+        description: 'Custom tag (optional, in addition to default tags)'
+        required: false
+        type: string
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Docker Hub
+        if: github.event_name == 'push' || github.event.inputs.push_to_registry == 'true'
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # 设置构建参数
+      - name: Set build parameters
+        id: params
+        run: |
+          # 确定是否推送
+          if [ "${{ github.event_name }}" = "push" ]; then
+            PUSH="true"
+          else
+            PUSH="${{ github.event.inputs.push_to_registry }}"
+          fi
+          echo "push=$PUSH" >> $GITHUB_OUTPUT
+          
+          # 确定平台
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ github.event.inputs.platforms }}" ]; then
+            PLATFORMS="${{ github.event.inputs.platforms }}"
+          else
+            PLATFORMS="linux/amd64,linux/arm64"
+          fi
+          echo "platforms=$PLATFORMS" >> $GITHUB_OUTPUT
+          
+          # 构建基础标签
+          BASE_TAGS=""
+          if [ "${{ github.ref }}" = "refs/heads/experimental" ]; then
+            BASE_TAGS="${{ secrets.DOCKERHUB_USERNAME }}/api-key-tester:${{ github.sha }}"
+          elif [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            BASE_TAGS="${{ secrets.DOCKERHUB_USERNAME }}/api-key-tester:latest,${{ secrets.DOCKERHUB_USERNAME }}/api-key-tester:${{ github.sha }}"
+          else
+            # 其他分支或手动触发时，使用分支名和 SHA
+            BRANCH_NAME=$(echo "${{ github.ref_name }}" | sed 's/[^a-zA-Z0-9._-]/-/g')
+            BASE_TAGS="${{ secrets.DOCKERHUB_USERNAME }}/api-key-tester:${BRANCH_NAME},${{ secrets.DOCKERHUB_USERNAME }}/api-key-tester:${{ github.sha }}"
+          fi
+          
+          # 添加自定义标签（如果有）
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ github.event.inputs.custom_tag }}" ]; then
+            BASE_TAGS="${BASE_TAGS},${{ secrets.DOCKERHUB_USERNAME }}/api-key-tester:${{ github.event.inputs.custom_tag }}"
+          fi
+          
+          echo "tags=$BASE_TAGS" >> $GITHUB_OUTPUT
+
+      # 显示构建信息
+      - name: Show build info
+        run: |
+          echo "Push to registry: ${{ steps.params.outputs.push }}"
+          echo "Target platforms: ${{ steps.params.outputs.platforms }}"
+          echo "Docker tags: ${{ steps.params.outputs.tags }}"
+
+      # 统一的构建和推送步骤
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: ${{ steps.params.outputs.push }}
+          platforms: ${{ steps.params.outputs.platforms }}
+          tags: ${{ steps.params.outputs.tags }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          # 添加构建参数以获得更好的多架构支持
+          build-args: |
+            BUILDPLATFORM=${{ runner.arch }}
+          # 启用更详细的构建输出
+          outputs: type=image,name=target,annotation-index.org.opencontainers.image.description=Multi-platform Docker image
