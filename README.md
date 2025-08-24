@@ -19,7 +19,7 @@
 
 ## 🚀 使用
 
-1. 访问：**https://swhesong.github.io/api-key-tester**
+1. 访问：**https://swhesong.github.io/OAI-Claude-Gemini-Test**
 2. 选择 API 类型
 3. 填写代理服务器 URL（必需）
 4. 粘贴或者导入（.txt） API 密钥列表
