@@ -3,8 +3,8 @@ import React, { createContext, useReducer, useContext } from 'react';
 // 初始状态
 const initialState = {
   // API配置
-  apiType: 'openai',
-  model: 'gpt-4o',
+  apiType: 'gemini',
+  model: 'gemini-2.5-pro',
   proxyUrl: '',
 
   // 输入
