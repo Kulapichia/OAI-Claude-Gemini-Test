@@ -1,8 +1,8 @@
 # 🔑 API Key 测活工具
 > 一个现代化的在线工具，批量检测 OpenAI、Claude、Gemini API 密钥有效性
 
-[![GitHub stars](https://img.shields.io/github/stars/swhesong/api-key-tester?style=flat&color=yellow)](https://github.com/swhesong/api-key-tester)
-[![在线使用](https://img.shields.io/badge/在线使用-GitHub%20Pages-blue)](https://swhesong.github.io/api-key-tester)
+[![GitHub stars](https://img.shields.io/github/stars/swhesong/OAI-Claude-Gemini-Test?style=flat&color=yellow)](https://github.com/swhesong/OAI-Claude-Gemini-Test)
+[![在线使用](https://img.shields.io/badge/在线使用-GitHub%20Pages-blue)](https://swhesong.github.io/OAI-Claude-Gemini-Test)
 
 ## ✨ 功能
 
