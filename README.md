@@ -450,4 +450,4 @@ MIT License
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=swhesong/api-key-tester&type=Date)](https://www.star-history.com/#swhesong/api-key-tester&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=swhesong/OAI-Claude-Gemini-Test&type=Date)](https://www.star-history.com/#swhesong/OAI-Claude-Gemini-Test&Date)
