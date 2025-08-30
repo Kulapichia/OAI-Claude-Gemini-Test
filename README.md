@@ -5,16 +5,16 @@
 
 **中文** | [English](./README.en.md)
 
-[![Contributors](https://img.shields.io/github/contributors/swhesong/api-key-tester?style=flat&color=orange)](https://github.com/swhesong/api-key-tester/graphs/contributors)
-[![GitHub stars](https://img.shields.io/github/stars/swhesong/api-key-tester?style=flat&color=yellow)](https://github.com/swhesong/api-key-tester/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/swhesong/api-key-tester?style=flat&color=green)](https://github.com/swhesong/api-key-tester/network/members)
+[![Contributors](https://img.shields.io/github/contributors/swhesong/OAI-Claude-Gemini-Test?style=flat&color=orange)](https://github.com/swhesong/OAI-Claude-Gemini-Test/graphs/contributors)
+[![GitHub stars](https://img.shields.io/github/stars/swhesong/OAI-Claude-Gemini-Test?style=flat&color=yellow)](https://github.com/swhesong/OAI-Claude-Gemini-Test/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/swhesong/OAI-Claude-Gemini-Test?style=flat&color=green)](https://github.com/swhesong/OAI-Claude-Gemini-Test/network/members)
 
-[![License](https://img.shields.io/github/license/swhesong/api-key-tester?style=flat&color=blue)](https://github.com/swhesong/api-key-tester/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/swhesong/OAI-Claude-Gemini-Test?style=flat&color=blue)](https://github.com/swhesong/OAI-Claude-Gemini-Test/blob/main/LICENSE)
 [![Node Version](https://img.shields.io/badge/node-%3E=16.0.0-brightgreen?style=flat&logo=node.js)](https://nodejs.org/)
-[![Top Language](https://img.shields.io/github/languages/top/swhesong/api-key-tester?style=flat&logo=javascript&color=yellow)](https://github.com/swhesong/api-key-tester)
+[![Top Language](https://img.shields.io/github/languages/top/swhesong/OAI-Claude-Gemini-Test?style=flat&logo=javascript&color=yellow)](https://github.com/swhesong/OAI-Claude-Gemini-Test)
 
-[![在线使用](https://img.shields.io/badge/在线使用-GitHub%20Pages-blue?style=flat&logo=github)](https://swhesong.github.io/api-key-tester)
-[![Deploy with Vercel](https://img.shields.io/badge/Deploy-Vercel-black?style=flat&logo=vercel)](https://vercel.com/new/clone?repository-url=https://github.com/swhesong/api-key-tester)
+[![在线使用](https://img.shields.io/badge/在线使用-GitHub%20Pages-blue?style=flat&logo=github)](https://swhesong.github.io/OAI-Claude-Gemini-Test)
+[![Deploy with Vercel](https://img.shields.io/badge/Deploy-Vercel-black?style=flat&logo=vercel)](https://vercel.com/new/clone?repository-url=https://github.com/swhesong/OAI-Claude-Gemini-Test)
 
 </div>
 
@@ -294,10 +294,10 @@ npm run build
 
 ```bash
 docker run -d \
-  --name api-key-tester \
+  --name OAI-Claude-Gemini-Test \
   -p 8080:80 \
   --restart unless-stopped \
-  ghcr.io/swhesong/api-key-tester:latest
+  ghcr.io/swhesong/OAI-Claude-Gemini-Test:latest
 ```
 
 访问 http://localhost:8080
@@ -308,7 +308,7 @@ docker run -d \
 
 ```bash
 # 下载配置文件
-curl -O https://raw.githubusercontent.com/swhesong/api-key-tester/main/docker-compose.yml
+curl -O https://raw.githubusercontent.com/swhesong/OAI-Claude-Gemini-Test/main/docker-compose.yml
 
 # 启动服务
 docker-compose up -d
@@ -324,7 +324,7 @@ docker-compose down
 ```yaml
 services:
   web:
-    image: ghcr.io/swhesong/api-key-tester:latest
+    image: ghcr.io/swhesong/OAI-Claude-Gemini-Test:latest
     ports:
       - "3000:80"  # 修改端口
     restart: unless-stopped
@@ -348,7 +348,7 @@ services:
 
 **一键部署：**
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/swhesong/api-key-tester&project-name=api-key-tester)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/swhesong/OAI-Claude-Gemini-Test&project-name=OAI-Claude-Gemini-Test)
 
 ### 5. 静态文件服务器部署
 
@@ -407,10 +407,11 @@ MIT License
 
 ## Star History
 
-<a href="https://www.star-history.com/#swhesong/api-key-tester&Date">
+<a href="https://www.star-history.com/#swhesong/OAI-Claude-Gemini-Test&Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=swhesong/api-key-tester&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=swhesong/api-key-tester&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=swhesong/api-key-tester&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=swhesong/OAI-Claude-Gemini-Test&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=swhesong/OAI-Claude-Gemini-Test&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=swhesong/OAI-Claude-Gemini-Test&type=Date" />
  </picture>
+
 </a>
