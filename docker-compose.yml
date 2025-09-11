@@ -1,6 +1,6 @@
 services:
   web:
-    image: devinglaw/api-key-tester:latest
+    image: swhesong/api-key-tester:latest
     ports:
       - "8839:8080"
     restart: unless-stopped
