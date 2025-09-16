@@ -5,16 +5,16 @@
 
 [中文](./README.md) | **English**
 
-[![Contributors](https://img.shields.io/github/contributors/swhesong/OAI-Claude-Gemini-Test?style=flat&color=orange)](https://github.com/swhesong/OAI-Claude-Gemini-Test/graphs/contributors)
-[![GitHub stars](https://img.shields.io/github/stars/swhesong/OAI-Claude-Gemini-Test?style=flat&color=yellow)](https://github.com/swhesong/OAI-Claude-Gemini-Test/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/swhesong/OAI-Claude-Gemini-Test?style=flat&color=green)](https://github.com/swhesong/OAI-Claude-Gemini-Test/network/members)
+[![Contributors](https://img.shields.io/github/contributors/Kulapichia/OAI-Claude-Gemini-Test?style=flat&color=orange)](https://github.com/Kulapichia/OAI-Claude-Gemini-Test/graphs/contributors)
+[![GitHub stars](https://img.shields.io/github/stars/Kulapichia/OAI-Claude-Gemini-Test?style=flat&color=yellow)](https://github.com/Kulapichia/OAI-Claude-Gemini-Test/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Kulapichia/OAI-Claude-Gemini-Test?style=flat&color=green)](https://github.com/Kulapichia/OAI-Claude-Gemini-Test/network/members)
 
-[![License](https://img.shields.io/github/license/swhesong/OAI-Claude-Gemini-Test?style=flat&color=blue)](https://github.com/swhesong/OAI-Claude-Gemini-Test/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/Kulapichia/OAI-Claude-Gemini-Test?style=flat&color=blue)](https://github.com/Kulapichia/OAI-Claude-Gemini-Test/blob/main/LICENSE)
 [![Node Version](https://img.shields.io/badge/node-%3E=16.0.0-brightgreen?style=flat&logo=node.js)](https://nodejs.org/)
-[![Top Language](https://img.shields.io/github/languages/top/swhesong/OAI-Claude-Gemini-Test?style=flat&logo=javascript&color=yellow)](https://github.com/swhesong/OAI-Claude-Gemini-Test)
+[![Top Language](https://img.shields.io/github/languages/top/Kulapichia/OAI-Claude-Gemini-Test?style=flat&logo=javascript&color=yellow)](https://github.com/Kulapichia/OAI-Claude-Gemini-Test)
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=flat&logo=github)](https://swhesong.github.io/OAI-Claude-Gemini-Test)
-[![Deploy with Vercel](https://img.shields.io/badge/Deploy-Vercel-black?style=flat&logo=vercel)](https://vercel.com/new/clone?repository-url=https://github.com/swhesong/OAI-Claude-Gemini-Test)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=flat&logo=github)](https://Kulapichia.github.io/OAI-Claude-Gemini-Test)
+[![Deploy with Vercel](https://img.shields.io/badge/Deploy-Vercel-black?style=flat&logo=vercel)](https://vercel.com/new/clone?repository-url=https://github.com/Kulapichia/OAI-Claude-Gemini-Test)
 
 </div>
 
@@ -37,7 +37,7 @@
 
 ## 🚀 Usage
 
-1. Visit: **https://swhesong.github.io/OAI-Claude-Gemini-Test**
+1. Visit: **https://Kulapichia.github.io/OAI-Claude-Gemini-Test**
 2. Select API type
 3. Enter proxy server URL (required)
 4. Paste or import (.txt) API key list
@@ -297,7 +297,7 @@ docker run -d \
   --name OAI-Claude-Gemini-Test \
   -p 8080:80 \
   --restart unless-stopped \
-  ghcr.io/swhesong/OAI-Claude-Gemini-Test:latest
+  ghcr.io/Kulapichia/OAI-Claude-Gemini-Test:latest
 ```
 
 Visit http://localhost:8080
@@ -308,7 +308,7 @@ Using the provided docker-compose.yml file:
 
 ```bash
 # Download configuration file
-curl -O https://raw.githubusercontent.com/swhesong/OAI-Claude-Gemini-Test/main/docker-compose.yml
+curl -O https://raw.githubusercontent.com/Kulapichia/OAI-Claude-Gemini-Test/main/docker-compose.yml
 
 # Start service
 docker-compose up -d
@@ -324,7 +324,7 @@ Custom configuration:
 ```yaml
 services:
   web:
-    image: ghcr.io/swhesong/OAI-Claude-Gemini-Test:latest
+    image: ghcr.io/Kulapichia/OAI-Claude-Gemini-Test:latest
     ports:
       - "3000:80"  # Change port
     restart: unless-stopped
@@ -348,7 +348,7 @@ services:
 
 **One-Click Deploy:**
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/swhesong/OAI-Claude-Gemini-Test&project-name=OAI-Claude-Gemini-Test)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Kulapichia/OAI-Claude-Gemini-Test&project-name=OAI-Claude-Gemini-Test)
 
 ### 5. Static File Server Deployment
 
@@ -407,10 +407,10 @@ MIT License
 
 ## Star History
 
-<a href="https://www.star-history.com/#swhesong/OAI-Claude-Gemini-Test&Date">
+<a href="https://www.star-history.com/#Kulapichia/OAI-Claude-Gemini-Test&Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=swhesong/OAI-Claude-Gemini-Test&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=swhesong/OAI-Claude-Gemini-Test&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=swhesong/OAI-Claude-Gemini-Test&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Kulapichia/OAI-Claude-Gemini-Test&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Kulapichia/OAI-Claude-Gemini-Test&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Kulapichia/OAI-Claude-Gemini-Test&type=Date" />
  </picture>
 </a>
